@@ -1,0 +1,119 @@
+/* Sidebar Container Styles */
+.sidebar-container {
+  transition: all 0.3s ease;
+}
+
+/* Profile Section Styles */
+.sidebar-container .profile-section {
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+.sidebar-container img {
+  width: 75%;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.sidebar-container h2 {
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+.sidebar-container h3 {
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+/* .sidebar-container .color-h6  {
+  color: #FEAF00 !important;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+} */
+
+/* Yellow line before h3 */
+h3::before {
+  content: '';
+  width: 4px;
+  height: 35px;
+  background-color: #F8D442;
+  position: absolute;
+  top: 18px;
+  left: 25px;
+  transition: all 0.3s ease;
+}
+
+/* Collapsed State Styles */
+.sidebar-container.collapsed img {
+  width: 40px;
+  height: 40px;
+  margin-left: 0.5rem;
+}
+
+.sidebar-container.collapsed h2 {
+  font-size: 1rem;
+  text-align: center;
+  margin-left: 0;
+}
+
+.sidebar-container.collapsed h3 {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.sidebar-container.collapsed h6 {
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+.sidebar-container.collapsed h3::before {
+  display: none;
+}
+
+.sidebar-container.collapsed .profile-section {
+  padding: 0.5rem;
+}
+
+/* Menu Item Styles */
+.sidebar-container .ps-menu-button:hover {
+  background-color: #FEAF00 !important;
+}
+
+/* Logout Menu Item */
+.end-menu {
+  float: right;
+  transition: all 0.3s ease;
+}
+
+.sidebar-container.collapsed .end-menu {
+  float: none;
+  margin-left: 0;
+}
+
+/* Hide text in collapsed state - show only icons */
+.sidebar-container.collapsed .ps-menu-label {
+  display: none !important;
+  opacity: 0 !important;
+  width: 0 !important;
+}
+
+.sidebar-container.collapsed .ps-menuitem-root .ps-menu-button span {
+  display: none !important;
+}
+
+/* Adjust icon alignment when collapsed */
+.sidebar-container.collapsed .ps-menu-icon {
+  margin-right: 0 !important;
+}
+
+/* Force hide all text content in menu items when collapsed */
+.sidebar-container.collapsed .ps-menu-button > span:not(.ps-menu-icon) {
+  display: none !important;
+}
+
+/* Profile menu specific styling */
+.profile-menu {
+  margin: 0.25rem 0;
+}

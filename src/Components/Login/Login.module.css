@@ -1,0 +1,148 @@
+.auth_container h1{
+    margin-left: -70px !important;
+    position: relative;
+}
+
+.auth_container h1::before{
+    content: '';
+    width: 6px;
+    height: 50px;
+    background-color: #F8D442;
+    position: absolute;
+    top: -5px;
+    left: 68px;
+}
+
+.auth_container h4{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.auth_container p{
+    font-size: 20px;
+    color: #6C6C6C;
+    margin-top: 5px;
+    margin-bottom: 0px !important;
+}
+
+.btn_sigIn{
+    background-color: #FEAF00;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0px;
+}
+
+.btn_sigIn:hover{
+    background-color: #F8D442;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+label{
+    color: #6C6C6C;
+}
+
+input{
+    border-color: #E5E5E5;
+    padding: 15px 10px !important;
+}
+
+input:focus{
+    box-shadow: none !important;
+    border-color: #FEAF00 !important;
+}
+
+.form_control::placeholder{
+    color: #C4C4C4 !important;
+    font-size: 16px !important;
+}
+
+/* Responsive Styles */
+
+/* Tablets and small laptops */
+@media (max-width: 992px) {
+    .auth_container h1{
+        margin-left: 0px !important;
+        font-size: 1.3rem !important;
+    }
+    
+    .auth_container h1::before{
+        display: none;
+    }
+    
+    .auth_container p{
+        font-size: 18px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .auth_container h1{
+        margin-left: 0px !important;
+        font-size: 1.2rem !important;
+    }
+    
+    .auth_container h1::before{
+        display: none;
+    }
+    
+    .auth_container h4{
+        font-size: 1.1rem;
+    }
+    
+    .auth_container p{
+        font-size: 16px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+    .auth_container h1{
+        margin-left: 0px !important;
+        font-size: 1.1rem !important;
+        padding-left: 0px;
+    }
+    
+    .auth_container h1::before{
+        display: none;
+    }
+    
+    .auth_container h4{
+        font-size: 1rem;
+    }
+    
+    .auth_container p{
+        font-size: 14px;
+    }
+    
+    .btn_sigIn{
+        font-size: 14px;
+    }
+    
+    input{
+        padding: 12px 8px !important;
+    }
+    
+    .form_control::placeholder{
+        font-size: 14px !important;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .auth_container h1{
+        font-size: 1rem !important;
+        padding-left: 0px;
+    }
+    
+    .auth_container h1::before{
+        display: none;
+    }
+    
+    .auth_container h4{
+        font-size: 0.95rem;
+    }
+    
+    .auth_container p{
+        font-size: 13px;
+    }
+}

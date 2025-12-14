@@ -1,0 +1,45 @@
+.container {
+    background: #F8F8F8 !important;
+    overflow: hidden;
+    display: flex;             
+    justify-content: space-between;
+    align-items: center;       
+    padding: 20px;  
+        margin-left: 12px;
+          
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 35px;
+}
+
+.button {
+    background-color: #FEAF00 !important;
+    color: white !important;
+    border: none;
+    padding: 12px 50px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none !important;
+}
+
+.button:hover {
+    background-color: #F8D442 !important;
+}
+/* .deleteText {
+  font-size: 18px;
+  color: red;
+  font-weight: bold;
+} */
+
+.userName {
+  color: #FEAF00;
+  font-weight: 700;
+}
+
+/* span{
+    border-bottom: 1px solid #C4C4C4;
+} */
+
