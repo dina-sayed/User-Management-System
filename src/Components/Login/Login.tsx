@@ -81,7 +81,7 @@ const onSubmit = async (data: any) => {
               <span
                 style={{
                   position: 'absolute',
-                  top: '50%',
+                  top: '65%',
                   right: '0.75rem',
                   transform: 'translateY(-50%)',
                   cursor: 'pointer',

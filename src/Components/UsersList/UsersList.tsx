@@ -12,7 +12,6 @@ export default function UsersList() {
   const navigate = useNavigate();
 
 
-  // 🔄 Get users
   const getUsers = async () => {
     const res = await axios.get("https://dummyjson.com/users");
     setUsers(res.data.users);
@@ -22,22 +21,18 @@ export default function UsersList() {
     getUsers();
   }, []);
 
-  // ➕ Add User
   const goToAdd = () => {
     navigate("/home/user-data");
   };
 
-  // ✏️ Update User
   const goToUpdate = (id: number) => {
     navigate("/home/user-data", { state: { id } });
   };
 
-  // 👤 View Profile
   const goToProfile = (id: number) => {
     navigate("/home/user-data", { state: { mode: "profile", id } });
   };
 
-  // 🗑 Delete User
   const deleteUser = (id: number, name: string) => {
     Swal.fire({
       title: `Delete ${name}?`,
@@ -49,7 +44,7 @@ export default function UsersList() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         await axios.delete(`https://dummyjson.com/users/${id}`);
-        setUsers(prev => prev.filter(user => user.id !== id));
+        setUsers(oldUsers  => oldUsers.filter(user => user.id !== id));
         Swal.fire("Deleted!", "User deleted successfully.", "success");
       }
     });
@@ -64,7 +59,7 @@ export default function UsersList() {
         </button>
       </div>
 
-      <div className="table-container ms-5 p-3">
+      <div className="table-container ms-5 p-0">
         <table className="table">
           <thead>
             <tr>

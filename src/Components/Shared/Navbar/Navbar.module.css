@@ -12,6 +12,7 @@
   z-index:-999;
   margin-top:6px !important;
   margin-bottom:8px !important;
+  
   }
 
 .leftBox {
@@ -118,3 +119,4 @@ margin-left: 35px !important;
   50% { transform: rotate(-20deg) scale(1.2); }
   75% { transform: rotate(15deg); }
 }
+

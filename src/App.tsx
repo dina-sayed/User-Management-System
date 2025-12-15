@@ -5,7 +5,7 @@ import NotFound from './Components/Shared/NotFound/NotFound'
 import MasterLayout from './Components/Shared/MasterLayout/MasterLayout'
 import UsersList from './Components/UsersList/UsersList'
 import UserData from './Components/UserData/UserData'
-import UserProfile from './Components/UserProfile/UserProfile'
+// import UserProfile from './Components/UserProfile/UserProfile'
 import { ToastContainer, toast } from 'react-toastify';
 import { useState } from 'react'
 import { jwtDecode } from 'jwt-decode'
@@ -31,7 +31,7 @@ function App() {
         {index:true,element:<UsersList/>},
         {path:'users-list',element:<UsersList/>},
         {path:'user-data',element:<UserData/>},
-        {path:'user-profile',element:<UserProfile/>},
+        // {path:'user-profile',element:<UserProfile/>},
       ]
     }
 
