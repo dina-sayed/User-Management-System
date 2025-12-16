@@ -4,11 +4,11 @@ import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { AuthContext } from '../Context/AuthContext.tsx'; // تأكدي المسار صح
+import { AuthContext } from '../Context/AuthContext.tsx';
 import styles from './Login.module.css';
 
 export default function Login() {
-  const { saveLoginData } = useContext(AuthContext); // فانكشن حفظ البيانات في Context
+  const { saveLoginData } = useContext(AuthContext); 
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
@@ -22,10 +22,8 @@ const onSubmit = async (data: any) => {
       { headers: { "Content-Type": "application/json" } }
     );
 
-    // حفظ التوكن
     localStorage.setItem("token", response.data.token || response.data.accessToken);
 
-    // حفظ البيانات في الـ Context
     saveLoginData();
 
     toast.success("Logged in successfully!", { autoClose: 2500 });
@@ -63,7 +61,7 @@ const onSubmit = async (data: any) => {
                 })}
                 placeholder="Enter your username"
               />
-              {errors.username && <p className="text-danger">{errors.username.message}</p>}
+              {errors.username && <p className="text-danger">{errors.username?.message}</p>}
             </div>
 
             <div className="mb-5 position-relative">
@@ -91,7 +89,7 @@ const onSubmit = async (data: any) => {
               >
                 {showPassword ? <Eye /> : <EyeOff />}
               </span>
-              {errors.password && <p className="text-danger">{errors.password.message}</p>}
+              {errors.password && <p className="text-danger">{errors.password?.message}</p>}
             </div>
 
             <div className="d-grid gap-2">
