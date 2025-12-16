@@ -1,13 +1,12 @@
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { AuthContext } from "../Context/AuthContext";
 import styles from "./UserData.module.css";
 
 export default function UserData() {
-  const { loginData } = useContext(AuthContext);
+  // const { loginData } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const location = useLocation();
