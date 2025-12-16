@@ -8,32 +8,32 @@ import { AuthContext } from '../Context/AuthContext.tsx';
 import styles from './Login.module.css';
 
 export default function Login() {
-  const { saveLoginData } = useContext(AuthContext);
+  const { saveLoginData } = useContext(AuthContext); 
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = async (data: any) => {
-    try {
-      const response = await axios.post(
-        "https://dummyjson.com/auth/login",
-        JSON.stringify(data),
-        { headers: { "Content-Type": "application/json" } }
-      );
+const onSubmit = async (data: any) => {
+  try {
+    const response = await axios.post(
+      "https://dummyjson.com/auth/login",
+      JSON.stringify(data),
+      { headers: { "Content-Type": "application/json" } }
+    );
 
-      localStorage.setItem("token", response.data.token || response.data.accessToken);
+    localStorage.setItem("token", response.data.token || response.data.accessToken);
 
-      saveLoginData();
+    saveLoginData();
 
-      toast.success("Logged in successfully!", { autoClose: 2500 });
+    toast.success("Logged in successfully!", { autoClose: 2500 });
 
-      navigate("/home/users-list");
-    } catch (error) {
-      console.log(error);
-      toast.error("Invalid username or password.", { autoClose: 2500 });
-    }
-  };
+    navigate("/home/users-list");
+  } catch (error) {
+    console.log(error);
+    toast.error("Invalid username or password.", { autoClose: 2500 });
+  }
+};
 
 
 
@@ -61,9 +61,9 @@ export default function Login() {
                 })}
                 placeholder="Enter your username"
               />
-              {errors.username && "message" in errors.username && (
-                <p className="text-danger">{errors.username.message}</p>
-              )}            </div>
+<p className="text-danger">{errors.username?.message?.toString() ?? ""}</p>
+              
+            </div>
 
             <div className="mb-5 position-relative">
               <label>Password</label>
@@ -90,9 +90,8 @@ export default function Login() {
               >
                 {showPassword ? <Eye /> : <EyeOff />}
               </span>
-              {errors.password && "message" in errors.password && (
-                <p className="text-danger">{errors.password.message}</p>
-              )}            </div>
+<p className="text-danger">{errors.password?.message?.toString() ?? ""}</p>
+            </div>
 
             <div className="d-grid gap-2">
               <button className={`${styles.btn_sigIn} btn text-white py-3`}>SIGN IN</button>
