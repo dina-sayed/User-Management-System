@@ -1,9 +1,9 @@
 import { Bookmark, GraduationCap, House, LogOutIcon, Receipt } from 'lucide-react';
-import React, { useContext, useState } from 'react'
-import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
+import { useContext, useState } from 'react';
+import { Menu, MenuItem, Sidebar } from 'react-pro-sidebar';
 import { Link } from 'react-router-dom';
-import './SideBar.module.css'
 import { AuthContext } from '../../Context/AuthContext';
+import './SideBar.module.css';
 
 export default function SideBar() {
   let { loginData } = useContext(AuthContext);

@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
 import { Play, Search } from "lucide-react";
-import styles from "./Navbar.module.css";
+import { useContext } from "react";
 import { AuthContext } from "../../Context/AuthContext";
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
       let {loginData} =useContext(AuthContext);

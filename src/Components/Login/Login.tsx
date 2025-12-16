@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react';
-import styles from './Login.module.css';
-import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import { Eye, EyeOff } from 'lucide-react';
+import { useContext, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Eye, EyeOff } from 'lucide-react';
-import  {AuthContext}  from '../Context/AuthContext.tsx'; // تأكدي المسار صح
+import { AuthContext } from '../Context/AuthContext.tsx'; // تأكدي المسار صح
+import styles from './Login.module.css';
 
 export default function Login() {
   const { saveLoginData } = useContext(AuthContext); // فانكشن حفظ البيانات في Context

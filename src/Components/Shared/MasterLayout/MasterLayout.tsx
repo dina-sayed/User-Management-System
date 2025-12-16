@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
-import Navbar from '../Navbar/Navbar'
+import { useContext } from 'react'
 import { Outlet } from 'react-router-dom'
-import SideBar from '../SideBar/SideBar'
 import { AuthContext } from '../../Context/AuthContext'
+import Navbar from '../Navbar/Navbar'
+import SideBar from '../SideBar/SideBar'
 
 export default function MasterLayout() {
   let{loginData}=useContext(AuthContext);

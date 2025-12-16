@@ -1,14 +1,12 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import AuthLayout from './Components/Shared/AuthLayout/AuthLayout'
-import NotFound from './Components/Shared/NotFound/NotFound'
 import MasterLayout from './Components/Shared/MasterLayout/MasterLayout'
-import UsersList from './Components/UsersList/UsersList'
+import NotFound from './Components/Shared/NotFound/NotFound'
 import UserData from './Components/UserData/UserData'
+import UsersList from './Components/UsersList/UsersList'
 // import UserProfile from './Components/UserProfile/UserProfile'
-import { ToastContainer, toast } from 'react-toastify';
-import { useState } from 'react'
-import { jwtDecode } from 'jwt-decode'
+import { ToastContainer } from 'react-toastify'
 import Login from './Components/Login/Login'
 
 function App() {
