@@ -54,6 +54,7 @@ const onSubmit = async (data: any) => {
               <label>User Name</label>
               <input
                 type="text"
+                value="emilys"
                 className={`${styles.form_control} form-control my-1`}
                 {...register("username", {
                   required: "Username is required",
@@ -69,6 +70,8 @@ const onSubmit = async (data: any) => {
               <label>Password</label>
               <input
                 type={showPassword ? "text" : "password"}
+                value="emilyspass"
+
                 className={`${styles.form_control} form-control my-1`}
                 style={{ paddingRight: '2.5rem' }}
                 {...register("password", {
